@@ -389,7 +389,9 @@ class _SearchBarState<T> extends State<SearchBar<T>>
                 Flexible(
                   child: AnimatedContainer(
                     duration: Duration(milliseconds: 200),
-                    width: _animate ? widthMax * .8 : widthMax,
+                    width: _animate && widget.cancellationWidget != null
+                        ? widthMax * .8
+                        : widthMax,
                     decoration: BoxDecoration(
                       borderRadius: widget.searchBarStyle.borderRadius,
                       color: widget.searchBarStyle.backgroundColor,
