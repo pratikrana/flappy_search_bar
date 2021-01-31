@@ -436,7 +436,7 @@ class _SearchBarState<T> extends State<SearchBar<T>>
                           ),
                         ),
                       )
-                    : Container(),
+                    : SizedBox.shrink(),
               ],
             ),
           ),
